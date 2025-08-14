@@ -14,15 +14,15 @@
             <h5>Enter Two Numbers</h5>
           </div>
           <div class="card-body">
-            <form>
+            <form methods="$_POST">
               <div class="mb-3">
                 <label for="firstNumber" class="form-label">First Number</label>
-                <input type="number" class="form-control" id="firstNumber" placeholder="First number">
+                <input type="number" class="form-control" id="firstNumber" placeholder="First number" name="num1">
               </div>
 
               <div class="mb-3">
                 <label for="secondNumber" class="form-label">Second Number</label>
-                <input type="number" class="form-control" id="secondNumber" placeholder="Second number">
+                <input type="number" class="form-control" id="secondNumber" placeholder="Second number" name="num2">
               </div>
 
               <button type="submit" class="btn btn-success w-100">Submit</button>
@@ -35,6 +35,10 @@
 </body>
 </html>
 <?php
+   echo $_GET ['num1'];
+   echo "<br>".$_GET ['num2'];
+   $sum = $_GET['num1'] + $_GET['num2'];
 
+echo "<br> The sum is : $sum";
 
 ?>
